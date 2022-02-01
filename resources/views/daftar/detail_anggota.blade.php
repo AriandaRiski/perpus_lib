@@ -50,7 +50,7 @@
                         </li>
 
                         <!-- ALAMAT IDENTITAS -->
-                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Alamat: {{$daftar->alamat_identitas}}, {{$daftar->kabupaten}}, {{$daftar->provinsi}}</li>
+                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Alamat: {{$daftar->alamat_identitas}}, {{$daftar->namakab}}, {{$daftar->namaprov}}</li>
 
                         <!-- ALAMAT SEKARANG -->
                         <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Alamat Skrg: {{$daftar->alamat_sekarang}}</li>

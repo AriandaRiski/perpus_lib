@@ -83,13 +83,14 @@ class daftarController extends Controller
      */
     public function show($id)
     {
-        $daftar = Daftar::find($id);
+        // $daftar = Daftar::find($id);
         
-        // $daftar = DB::table('daftar as a')
-        // ->select('a.*','b.id as id_prov','b.name as namaprov','c.id as id_kab','c.name as namakab','a.id as id_a')
-        // ->leftJoin('provinces as b','a.provinsi','=','b.id')
-        // ->leftJoin('regencies as c','b.id','=','c.province_id')
-        // ->find($id_a);
+        $daftar = DB::table('daftar as a')
+        ->select('a.*','b.id as id_prov','b.name as namaprov','c.id as id_kab','c.name as namakab')
+        ->leftJoin('provinces as b','a.provinsi','=','b.id')
+        ->leftJoin('regencies as c','a.kabupaten','=','c.id')
+        ->where('a.id',$id)
+        ->first();
         return view('daftar/detail_anggota',compact('daftar'));
     }
 
