@@ -43,7 +43,7 @@
             if (now.getTimezoneOffset() == 0) (a=now.getTime() + ( 7 *60*60*1000))
             else (a=now.getTime());
             now.setTime(a);
-            document.write(" Jam " + ((now.getHours() < 10) ? "0" : "") + now.getHours() + ":" + ((now.getMinutes() < 10)? "0" : "") + now.getMinutes() + (" W.I.B "))
+            document.write("<br> Jam " + ((now.getHours() < 10) ? "0" : "") + now.getHours() + ":" + ((now.getMinutes() < 10)? "0" : "") + now.getMinutes() + (" W.I.B "))
         </script>
     </font>
     </a>
@@ -75,7 +75,7 @@
 
   </div>
   <!-- /.lockscreen-item -->
- <center><a href="/" type="button" class="btn btn-secondary btn-sm">BACK TO HOME</a></center>
+ <center><a href="/" type="button" class="btn btn-secondary btn-sm">BACK</a></center>
 </div>
 <!-- /.center -->
 

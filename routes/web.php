@@ -15,7 +15,7 @@ use App\Http\Controllers\daftarController;
 */
 
 
-// Route::view('/daftar_anggota',('.pendaftaran'));
+Route::view('/daftar_anggota',('cobaya'));
 Route::view('/',('welcome'));
 Route::view('/admin',('halaman_login'));
 Route::resource('home',daftarController::class);

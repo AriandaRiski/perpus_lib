@@ -79,20 +79,20 @@
 </textarea>
 <br />
     <div id="UpdatePanel1">
-        <fieldset>
+    <fieldset>
             <div class="form-row mb-4">
             <div class="col-lg-6 col-md-6 col-sm-12">
             <select name="provinsi" id="provinsi" class="form-control">
-		<option selected="selected" value="{{ $c_daftar->provinsi }}">{{ $c_daftar->provinsi }}</option>
-                    <!-- @foreach ($provinces as $prov )
-                  <option value="{{ $prov->id }}">{{ $prov->name }}</option>
-                    @endforeach -->
+		<option selected="selected" value="0">- Pilih Provinsi -</option>
+                    @foreach ($provinces as $prov )
+                  <option value="{{ $prov->id }}" {{ $prov->id == $c_daftar->provinsi ? 'selected' : ''}}>{{ $prov->name }}</option>
+                    @endforeach
 	        </select>
             </div>
 
             <div class="col-lg-6 col-md-6 col-sm-12">
             <select name="kabupaten" id="kabupaten" class="form-control" style="min-width:200px">
-		<option value="{{$c_daftar->kabupaten}}">{{$c_daftar->kabupaten}}</option>
+		<option value="0">- Pilih Kota -</option>
             </select>
             </div>
             </div>
@@ -125,7 +125,7 @@
     </div>
 
 
-                    <hr class="mb-4" />
+    <hr class="mb-4" />
 
     <div class="row">
     <div class="col-lg-6 col-md-6 col-sm-12">
@@ -245,8 +245,6 @@
             <!-- date-range-picker -->
 <script src="{{asset('template/')}}/plugins/daterangepicker/daterangepicker.js"></script>
 
-  
-@endsection
 <script>
 $(function(){
     $.ajaxSetup({
@@ -275,3 +273,4 @@ $(function(){
 });
 
 </script>
+@endsection
